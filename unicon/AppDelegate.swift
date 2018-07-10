@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginButtonDelegate {
         
         IQKeyboardManager.shared.enable = true
         
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        UINavigationBar.appearance().barTintColor = UIColor.hex(hex: "FFFCF2", alpha: 1.0)
         UINavigationBar.appearance().shadowImage = UIImage()
         
         return true

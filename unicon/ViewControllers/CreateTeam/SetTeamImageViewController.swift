@@ -41,6 +41,7 @@ class SetTeamImageViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func updateImage(image: UIImage) {
+        imageBtn.setTitle(nil, for: UIControlState())
         imageBtn.setImage(image, for: UIControlState())
     }
 

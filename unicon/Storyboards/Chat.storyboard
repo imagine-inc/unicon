@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qtx-aA-5Vh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,11 +49,30 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="cp1-zZ-Wiv" id="S7Z-S1-Rk1"/>
+                        <segue destination="tzK-f6-E7V" kind="show" identifier="ToSingleChat" id="4ce-1P-EqE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fca-xb-u7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1383.2" y="1797.7511244377813"/>
+        </scene>
+        <!--相手チーム名-->
+        <scene sceneID="S3C-pr-Ncz">
+            <objects>
+                <viewController id="tzK-f6-E7V" customClass="SingleChatViewController" customModule="unicon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5i1-0X-8C0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="qTt-qV-N8w"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="相手チーム名" id="Efi-49-DEa">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="1I8-bw-ZSW"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cts-IH-ykB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-529" y="1798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nVE-ha-lxH">
@@ -77,4 +96,5 @@
     <resources>
         <image name="unicorn" width="64" height="64"/>
     </resources>
+    <color key="tintColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

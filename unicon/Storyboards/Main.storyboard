@@ -53,7 +53,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="kNT-4R-rYk" firstAttribute="centerX" secondItem="V8B-Ih-ipa" secondAttribute="centerX" id="Iwl-H4-cvf"/>
                                     <constraint firstAttribute="height" constant="150" id="J7q-Wq-XHi"/>
@@ -61,7 +61,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="V8B-Ih-ipa" firstAttribute="leading" secondItem="gfs-0w-pet" secondAttribute="leading" id="8jQ-jc-PDA"/>
                             <constraint firstItem="gfs-0w-pet" firstAttribute="trailing" secondItem="sdC-CH-f9M" secondAttribute="trailing" constant="10" id="Dix-jN-Wdv"/>
@@ -75,13 +75,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="xnd-bf-uFm">
                         <barButtonItem key="leftBarButtonItem" image="unicorn" id="Rlp-ix-JSw">
-                            <color key="tintColor" red="0.88235294119999996" green="0.086274509799999996" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="goProfile:" destination="HcR-hg-Ncv" id="9kr-qA-obp"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="chat" id="eZk-8r-BLK">
-                            <color key="tintColor" red="0.88235294119999996" green="0.086274509799999996" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="goChat:" destination="HcR-hg-Ncv" id="n7z-1c-PxG"/>
                             </connections>

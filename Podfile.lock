@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.7.2)
+  - Alamofire (4.7.3)
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
   - Bolts (1.9.0):
@@ -14,7 +14,7 @@ PODS:
   - BoringSSL/Implementation (10.0.5):
     - BoringSSL/Interface (= 10.0.5)
   - BoringSSL/Interface (10.0.5)
-  - BubbleTransition (3.0.1)
+  - BubbleTransition (3.1.0)
   - CropViewController (2.3.6)
   - EZSwipeController (0.6.1)
   - FacebookCore (0.3.1):
@@ -79,30 +79,33 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.4)
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
-  - gRPC (1.12.0):
-    - gRPC-RxLibrary (= 1.12.0)
-    - gRPC/Main (= 1.12.0)
-  - gRPC-Core (1.12.0):
-    - gRPC-Core/Implementation (= 1.12.0)
-    - gRPC-Core/Interface (= 1.12.0)
-  - gRPC-Core/Implementation (1.12.0):
+  - gRPC (1.13.0):
+    - gRPC-RxLibrary (= 1.13.0)
+    - gRPC/Main (= 1.13.0)
+  - gRPC-Core (1.13.0):
+    - gRPC-Core/Implementation (= 1.13.0)
+    - gRPC-Core/Interface (= 1.13.0)
+  - gRPC-Core/Implementation (1.13.0):
     - BoringSSL (~> 10.0)
-    - gRPC-Core/Interface (= 1.12.0)
+    - gRPC-Core/Interface (= 1.13.0)
     - nanopb (~> 0.3)
-  - gRPC-Core/Interface (1.12.0)
-  - gRPC-ProtoRPC (1.12.0):
-    - gRPC (= 1.12.0)
-    - gRPC-RxLibrary (= 1.12.0)
+  - gRPC-Core/Interface (1.13.0)
+  - gRPC-ProtoRPC (1.13.0):
+    - gRPC-ProtoRPC/Main (= 1.13.0)
+  - gRPC-ProtoRPC/Main (1.13.0):
+    - gRPC (= 1.13.0)
+    - gRPC-RxLibrary (= 1.13.0)
     - Protobuf (~> 3.0)
-  - gRPC-RxLibrary (1.12.0)
-  - gRPC/Main (1.12.0):
-    - gRPC-Core (= 1.12.0)
-    - gRPC-RxLibrary (= 1.12.0)
+  - gRPC-RxLibrary (1.13.0)
+  - gRPC/Main (1.13.0):
+    - gRPC-Core (= 1.13.0)
+    - gRPC-RxLibrary (= 1.13.0)
   - GTMSessionFetcher/Core (1.1.15)
   - IQKeyboardManagerSwift (6.0.4)
   - Koloda (4.3.1):
     - pop (~> 1.0)
   - leveldb-library (1.20)
+  - MessageKit (1.0.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -126,6 +129,7 @@ DEPENDENCIES:
   - Firestore (from `https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json`)
   - IQKeyboardManagerSwift
   - Koloda (~> 4.3.1)
+  - MessageKit (>= 1.0.0)
   - SwiftGifOrigin (~> 1.6.1)
 
 SPEC REPOS:
@@ -158,6 +162,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Koloda
     - leveldb-library
+    - MessageKit
     - nanopb
     - pop
     - Protobuf
@@ -168,11 +173,11 @@ EXTERNAL SOURCES:
     :podspec: https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
-  BubbleTransition: 5038c843e449052f1bbbe0451605c45ec5b3ca0a
+  BubbleTransition: 9c6e1be2dede21aca6ef5388dd9bea9771f7e7fe
   CropViewController: e6d4bd512d15a1709e9ddf71fe7d98ffd05dda0f
   EZSwipeController: 255b0f8aed31963b0236802c926e27dd006a2532
   FacebookCore: 33078ef1d7d76b73f7e8c990dca7d3ea6db8d22f
@@ -189,19 +194,20 @@ SPEC CHECKSUMS:
   FirebaseStorage: 0c223481c8f89ed300cf1239ddd2d9833622c65f
   Firestore: 5a33dcb27d8d33d4e82e032ee31ecd2904a72167
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
-  gRPC: 9362451032695e2dfb7bafcd3740e3a27939e4ff
-  gRPC-Core: 9696b220565b283e021cf2722d473a4a74b7622a
-  gRPC-ProtoRPC: a1bd56fb1991a8dae4581250d7259eddabb66779
-  gRPC-RxLibrary: 1ed5314e8b38cd6e55c9bfa048387136ae925ce9
+  gRPC: 81b990caa01d7c32605d300c2ffd1b5ba0ef9e49
+  gRPC-Core: a56b086a8ef5ced6f6ba5be5bc0a63fca185015a
+  gRPC-ProtoRPC: 842797fbe05dfcf891afb4a5048e5ccf5f06ef86
+  gRPC-RxLibrary: fa6852f98d6ec0b73c0ec2f6406c26943099d501
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   IQKeyboardManagerSwift: 36dbe324b4f9793f5f41ba5227f3e7c76dfefd50
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  MessageKit: 16160036b16476b04bd0e9f2c7ce67e662e503e4
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: f5d845389e608fe16fbcb4b1e6d4c02db3e1c2b3
+PODFILE CHECKSUM: dbdd9bce42a3b6ad060c50c344e32a28ab70bd22
 
 COCOAPODS: 1.5.3

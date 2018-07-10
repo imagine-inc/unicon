@@ -4,7 +4,7 @@
 
 [![CocoaPods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 4.0](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift 4.0](https://img.shields.io/badge/swift-4.0-orange.svg)
 [![codebeat badge](https://codebeat.co/badges/45635139-6294-4ac8-9f39-6f1d3b18dd23)](https://codebeat.co/projects/github-com-andreamazz-bubbletransition)
 
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
@@ -21,7 +21,7 @@ A custom modal transition that presents and dismiss a controller inside an expan
 # Usage
 Install through [CocoaPods](http://cocoapods.org):
 ```
-pod 'BubbleTransition', '~> 2.0.0'
+pod 'BubbleTransition', '~> 3.0.0'
 
 use_frameworks!
 ```
@@ -59,6 +59,35 @@ public func animationController(forDismissed dismissed: UIViewController) -> UIV
 ```
 
 You can find the Objective-C equivalent [here](https://gist.github.com/andreamazz/9b0d6c7db065555ec0d7).
+
+# Swipe to dismiss
+
+You can use an interactive gesture to dismiss the presented controller. To enable this gesture, prepare the interactive transition:
+
+```swift
+let interactiveTransition = BubbleInteractiveTransition()
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  let controller = segue.destination
+  controller.transitioningDelegate = self
+  controller.modalPresentationStyle = .custom
+  interactiveTransition.attach(to: controller)
+}
+```
+
+and implement `interactionControllerForDismissal` in your presenting controller:
+
+```swift
+func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+  return interactiveTransition
+}
+```
+
+You can decide the gesture threshold and the swipe direction:
+```swift
+interactiveTransition.interactionThreshold = 0.5
+interactionThreshold.swipeDirection = .up
+```
 
 # Properties
 ```swift

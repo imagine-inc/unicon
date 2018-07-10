@@ -12,7 +12,7 @@ import FacebookLogin
 import AlamofireImage
 import BubbleTransition
 
-class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate, UITextViewDelegate {
     var window: UIWindow?
     
     @IBOutlet weak var teamNameLabel: UILabel!
@@ -29,7 +29,10 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        teamIntroTextView.delegate = self
+        teamIntroTextView.textContainerInset = UIEdgeInsetsMake(20, 30, 20, 30)
+        teamIntroTextView.sizeToFit()
         
         self.navigationItem.hidesBackButton = true
         teamImageView.layer.cornerRadius = 80

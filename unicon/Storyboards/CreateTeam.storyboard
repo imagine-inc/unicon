@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Un-hw-TtP">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController storyboardIdentifier="NewTeamVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Un-hw-TtP" customClass="NewTeamViewController" customModule="unicon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K60-ly-B27">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bps-Zs-0xX">
-                                <rect key="frame" x="20" y="724" width="335" height="55"/>
+                                <rect key="frame" x="20" y="587" width="335" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="KiN-R7-Zza"/>
@@ -38,7 +38,7 @@
                         <constraints>
                             <constraint firstItem="bps-Zs-0xX" firstAttribute="leading" secondItem="Non-Rb-oGq" secondAttribute="leading" constant="20" id="3mx-B0-YTC"/>
                             <constraint firstItem="Non-Rb-oGq" firstAttribute="trailing" secondItem="bps-Zs-0xX" secondAttribute="trailing" constant="20" id="DsI-3P-wGA"/>
-                            <constraint firstAttribute="bottom" secondItem="bps-Zs-0xX" secondAttribute="bottom" constant="33" id="i3v-1B-Dox"/>
+                            <constraint firstAttribute="bottom" secondItem="bps-Zs-0xX" secondAttribute="bottom" constant="25" id="i3v-1B-Dox"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Non-Rb-oGq"/>
                     </view>
@@ -52,25 +52,15 @@
             <objects>
                 <viewController id="Lo0-67-SnA" customClass="SelectGenderViewController" customModule="unicon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HV9-uV-v2s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-1a-dAj">
-                                <rect key="frame" x="226" y="723" width="133" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
-                                <state key="normal" title="次へ">
-                                    <color key="titleColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextBtnTapped:" destination="Lo0-67-SnA" eventType="touchUpInside" id="iFA-Dg-sV0"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e8K-XM-zLC">
-                                <rect key="frame" x="0.0" y="292" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8K-XM-zLC">
+                                <rect key="frame" x="28" y="263" width="320" height="162"/>
                                 <color key="tintColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="ZkJ-Ae-MLh"/>
+                                </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="マッチングを希望するチームのジェンダーを設定しよう！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM3-yY-zQi">
                                 <rect key="frame" x="16" y="124" width="343" height="71"/>
@@ -79,8 +69,29 @@
                                 <color key="textColor" red="0.10980392160000001" green="0.15686274510000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-1a-dAj">
+                                <rect key="frame" x="226" y="587" width="133" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="nhK-Re-hBL"/>
+                                    <constraint firstAttribute="width" constant="133" id="ye8-FZ-gVk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <state key="normal" title="次へ">
+                                    <color key="titleColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextBtnTapped:" destination="Lo0-67-SnA" eventType="touchUpInside" id="iFA-Dg-sV0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sbR-j5-oCf" firstAttribute="trailing" secondItem="O3S-1a-dAj" secondAttribute="trailing" constant="16" id="6PF-FX-eE9"/>
+                            <constraint firstItem="e8K-XM-zLC" firstAttribute="centerX" secondItem="sbR-j5-oCf" secondAttribute="centerX" id="FhG-XI-UTh"/>
+                            <constraint firstItem="e8K-XM-zLC" firstAttribute="centerY" secondItem="sbR-j5-oCf" secondAttribute="centerY" id="Hcq-b3-hQV"/>
+                            <constraint firstItem="sbR-j5-oCf" firstAttribute="bottom" secondItem="O3S-1a-dAj" secondAttribute="bottom" constant="25" id="vcM-uQ-2MU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sbR-j5-oCf"/>
                     </view>
                     <connections>
@@ -97,22 +108,30 @@
             <objects>
                 <viewController id="s3j-lu-GMS" customClass="SetTeamNameViewController" customModule="unicon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="El0-lP-icC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-PU-CTw">
-                                <rect key="frame" x="30" y="386" width="315" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="OE2-5E-bvQ"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="イケメンズ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-PU-CTw" customClass="MyTextField" customModule="unicon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="321" width="375" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMx-5A-Vh1">
-                                <rect key="frame" x="226" y="723" width="133" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チーム名を決めよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5G-0n-8Xg">
+                                <rect key="frame" x="42" y="120" width="224" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.15686274510000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMx-5A-Vh1">
+                                <rect key="frame" x="226" y="587" width="133" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="TTO-kN-XFi"/>
+                                    <constraint firstAttribute="width" constant="133" id="vZo-4L-Ga7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,20 +141,15 @@
                                     <action selector="nextBtnTapped:" destination="Lo0-67-SnA" eventType="touchUpInside" id="ziS-WU-6zI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チーム名を決めよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5G-0n-8Xg">
-                                <rect key="frame" x="42" y="120" width="224" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
-                                <color key="textColor" red="0.10980392160000001" green="0.15686274510000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="IF4-dI-FK0" firstAttribute="trailing" secondItem="RNN-PU-CTw" secondAttribute="trailing" id="3M1-AJ-uCo"/>
+                            <constraint firstItem="IF4-dI-FK0" firstAttribute="trailing" secondItem="mMx-5A-Vh1" secondAttribute="trailing" constant="16" id="5BW-nf-JTA"/>
                             <constraint firstItem="RNN-PU-CTw" firstAttribute="centerY" secondItem="El0-lP-icC" secondAttribute="centerY" id="A8j-01-MiC"/>
-                            <constraint firstItem="RNN-PU-CTw" firstAttribute="leading" secondItem="IF4-dI-FK0" secondAttribute="leading" constant="30" id="SUb-y5-mL6"/>
+                            <constraint firstItem="RNN-PU-CTw" firstAttribute="leading" secondItem="IF4-dI-FK0" secondAttribute="leading" id="FZT-CC-zX3"/>
                             <constraint firstItem="RNN-PU-CTw" firstAttribute="centerX" secondItem="El0-lP-icC" secondAttribute="centerX" id="aea-rq-Ymd"/>
-                            <constraint firstItem="IF4-dI-FK0" firstAttribute="trailing" secondItem="RNN-PU-CTw" secondAttribute="trailing" constant="30" id="bXZ-qf-kRP"/>
+                            <constraint firstItem="IF4-dI-FK0" firstAttribute="bottom" secondItem="mMx-5A-Vh1" secondAttribute="bottom" constant="25" id="v4q-qN-wI9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IF4-dI-FK0"/>
                     </view>
@@ -153,14 +167,16 @@
             <objects>
                 <viewController storyboardIdentifier="SetTeamImageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YRa-k0-mon" customClass="SetTeamImageViewController" customModule="unicon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sew-bh-Blk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJp-If-xVv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="473.66666666666669"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="473.5"/>
+                                <color key="backgroundColor" red="0.72941176470000002" green="0.81960784310000001" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rJp-If-xVv" secondAttribute="height" multiplier="19:24" id="1m7-24-wXT"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                 <state key="normal" title="写真を設定">
                                     <color key="titleColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -168,10 +184,13 @@
                                     <action selector="pickImage:" destination="YRa-k0-mon" eventType="touchUpInside" id="5O8-23-awa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-7B-nFV">
-                                <rect key="frame" x="226" y="723" width="133" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-7B-nFV">
+                                <rect key="frame" x="226" y="587" width="133" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Yrr-Kz-8fq"/>
+                                    <constraint firstAttribute="width" constant="133" id="Zt5-wB-MyN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -186,8 +205,10 @@
                         <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rJp-If-xVv" firstAttribute="leading" secondItem="bzr-Or-aFL" secondAttribute="leading" id="FmT-Cg-K17"/>
+                            <constraint firstItem="bzr-Or-aFL" firstAttribute="trailing" secondItem="6nq-7B-nFV" secondAttribute="trailing" constant="16" id="Gkq-qB-qeo"/>
                             <constraint firstItem="rJp-If-xVv" firstAttribute="top" secondItem="Sew-bh-Blk" secondAttribute="top" id="NpQ-IS-BYD"/>
                             <constraint firstItem="rJp-If-xVv" firstAttribute="trailing" secondItem="bzr-Or-aFL" secondAttribute="trailing" id="nqo-Fx-4ZH"/>
+                            <constraint firstItem="bzr-Or-aFL" firstAttribute="bottom" secondItem="6nq-7B-nFV" secondAttribute="bottom" constant="25" id="ycc-im-vQb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bzr-Or-aFL"/>
                     </view>
@@ -205,21 +226,23 @@
             <objects>
                 <viewController id="cgj-oZ-DCV" customClass="SetTeamIntroViewController" customModule="unicon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZQ-ma-p1G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UhT-jh-NMk">
-                                <rect key="frame" x="0.0" y="248" width="375" height="317"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チームの特徴を紹介しよう！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gan-xh-W1k">
+                                <rect key="frame" x="16" y="88" width="286" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV2-1K-8aj">
-                                <rect key="frame" x="226" y="723" width="133" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.15686274510000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV2-1K-8aj">
+                                <rect key="frame" x="226" y="587" width="133" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="8sw-td-AD4"/>
+                                    <constraint firstAttribute="height" constant="55" id="dZy-0L-Lkp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -231,15 +254,25 @@
                                     <action selector="nextBtnTapped:" destination="s3j-lu-GMS" eventType="touchUpInside" id="dmf-Cm-qZ4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チームの特徴を紹介しよう！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gan-xh-W1k">
-                                <rect key="frame" x="26" y="151" width="286" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
-                                <color key="textColor" red="0.10980392160000001" green="0.15686274510000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UhT-jh-NMk">
+                                <rect key="frame" x="0.0" y="175" width="375" height="317"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="317" id="Ipy-0C-U3J"/>
+                                </constraints>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I8K-hv-hDY" firstAttribute="bottom" secondItem="rV2-1K-8aj" secondAttribute="bottom" constant="25" id="9QK-lp-NzM"/>
+                            <constraint firstItem="I8K-hv-hDY" firstAttribute="trailing" secondItem="rV2-1K-8aj" secondAttribute="trailing" constant="16" id="PNi-fC-MQP"/>
+                            <constraint firstItem="UhT-jh-NMk" firstAttribute="trailing" secondItem="I8K-hv-hDY" secondAttribute="trailing" id="Pip-sv-FxE"/>
+                            <constraint firstItem="UhT-jh-NMk" firstAttribute="centerY" secondItem="eZQ-ma-p1G" secondAttribute="centerY" id="kNX-r7-h6x"/>
+                            <constraint firstItem="UhT-jh-NMk" firstAttribute="leading" secondItem="I8K-hv-hDY" secondAttribute="leading" id="wxC-iX-v4F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="I8K-hv-hDY"/>
                     </view>
                     <connections>
@@ -256,14 +289,14 @@
             <objects>
                 <viewController storyboardIdentifier="InviteVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mD7-bh-lcc" customClass="InviteMemberViewController" customModule="unicon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jw9-gD-8cw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLt-g5-FUn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="541"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4BI-m2-9kT">
-                                        <rect key="frame" x="62.333333333333343" y="164" width="251.00000000000003" height="213"/>
+                                        <rect key="frame" x="62.5" y="108.5" width="251" height="213"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メンバーを招待しよう！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HV-Gt-xDL">
                                                 <rect key="frame" x="0.0" y="0.0" width="251" height="23"/>
@@ -272,7 +305,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2OQ-sy-DDu">
-                                                <rect key="frame" x="45.666666666666657" y="53" width="160" height="160"/>
+                                                <rect key="frame" x="45.5" y="53" width="160" height="160"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="2OQ-sy-DDu" secondAttribute="height" multiplier="1:1" id="MB2-J7-7T9"/>
                                                     <constraint firstAttribute="height" constant="160" id="oJU-Wg-hCi"/>
@@ -288,7 +321,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Ddw-4V-u0y">
-                                <rect key="frame" x="0.0" y="541" width="375" height="237"/>
+                                <rect key="frame" x="0.0" y="410" width="375" height="237"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AMz-jY-RRg">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
@@ -313,7 +346,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kLY-R1-uYv">
-                                        <rect key="frame" x="22.666666666666657" y="117" width="330" height="120"/>
+                                        <rect key="frame" x="22.5" y="117" width="330" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRe-0b-5U4">
                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="55"/>
@@ -323,7 +356,7 @@
                                                     <constraint firstAttribute="width" constant="330" id="psT-OT-65t"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
-                                                <state key="normal" title="IDを送信">
+                                                <state key="normal" title="招待状を送信">
                                                     <color key="titleColor" red="1" green="0.98823529409999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -331,7 +364,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr4-yd-nvP">
-                                                <rect key="frame" x="98.333333333333314" y="65" width="133" height="55"/>
+                                                <rect key="frame" x="98.5" y="65" width="133" height="55"/>
                                                 <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="EY4-L9-Qwh"/>
@@ -353,7 +386,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="237" id="MmT-nu-KlX"/>
+                                    <constraint firstAttribute="height" constant="237" id="MmT-nu-KlX" userLabel="250"/>
                                     <constraint firstAttribute="trailing" secondItem="AMz-jY-RRg" secondAttribute="trailing" id="Nno-BS-TvY"/>
                                     <constraint firstItem="AMz-jY-RRg" firstAttribute="leading" secondItem="Ddw-4V-u0y" secondAttribute="leading" id="uIE-oI-w4A"/>
                                 </constraints>
@@ -364,8 +397,8 @@
                             <constraint firstItem="Ddw-4V-u0y" firstAttribute="leading" secondItem="Jw9-gD-8cw" secondAttribute="leading" id="562-F2-0um"/>
                             <constraint firstItem="gLt-g5-FUn" firstAttribute="trailing" secondItem="MDa-AV-IUz" secondAttribute="trailing" id="FBB-UL-wq8"/>
                             <constraint firstItem="gLt-g5-FUn" firstAttribute="leading" secondItem="MDa-AV-IUz" secondAttribute="leading" id="QwV-sH-l4U"/>
-                            <constraint firstItem="Ddw-4V-u0y" firstAttribute="bottom" secondItem="MDa-AV-IUz" secondAttribute="bottom" id="ZdL-fv-Cqs"/>
-                            <constraint firstItem="Ddw-4V-u0y" firstAttribute="top" secondItem="gLt-g5-FUn" secondAttribute="bottom" id="bbf-RK-fA7"/>
+                            <constraint firstItem="Ddw-4V-u0y" firstAttribute="bottom" secondItem="MDa-AV-IUz" secondAttribute="bottom" constant="-20" id="ZdL-fv-Cqs"/>
+                            <constraint firstItem="Ddw-4V-u0y" firstAttribute="top" secondItem="gLt-g5-FUn" secondAttribute="bottom" constant="-20" id="bbf-RK-fA7"/>
                             <constraint firstItem="gLt-g5-FUn" firstAttribute="top" secondItem="Jw9-gD-8cw" secondAttribute="top" id="n3b-Yr-8au"/>
                             <constraint firstItem="MDa-AV-IUz" firstAttribute="trailing" secondItem="Ddw-4V-u0y" secondAttribute="trailing" id="yuZ-Rg-tKG"/>
                         </constraints>

@@ -25,6 +25,7 @@ target 'unicon' do
    pod 'Koloda', '~> 4.3.1'
    pod 'EZSwipeController'
    pod 'CropViewController'
+   pod 'MessageKit', '>= 1.0.0'
    
    # UIDesigns
    pod 'BubbleTransition'

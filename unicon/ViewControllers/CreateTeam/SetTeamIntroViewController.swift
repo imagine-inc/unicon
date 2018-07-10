@@ -9,7 +9,7 @@
 import UIKit
 import Firestore
 
-class SetTeamIntroViewController: UIViewController {
+class SetTeamIntroViewController: UIViewController, UITextViewDelegate {
 
     
     // heres are the data to create a team
@@ -25,8 +25,10 @@ class SetTeamIntroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(SetTeamIntroViewController.targetGender)
-        print(SetTeamIntroViewController.teamName)
+        hitokotoTextView.delegate = self
+        hitokotoTextView.textContainerInset = UIEdgeInsetsMake(20, 30, 20, 30)
+        hitokotoTextView.sizeToFit()
+        
         
     }
 
